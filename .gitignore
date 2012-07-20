@@ -1,0 +1,36 @@
+# ignore emacs backup files
+*~
+
+#for rpmbuild setups
+BUILD/
+BUILDROOT/
+RPMS/
+# the *.tar/*.gz below will take care of external sources, but I'll want to
+# keep any original non-tarred sources of my own
+#SOURCES/
+SRPMS/
+
+# ignore eclipse project files
+.project
+.cproject
+.metadata
+.classpath
+.settings
+
+# conmpiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.obj
+*.so
+*.a
+
+# packages
+*.tar
+*.gz
+*.zip
+*.rpm
+*.jar
+*.war
