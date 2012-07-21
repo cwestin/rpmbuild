@@ -17,7 +17,7 @@ Source0: %{distro}.tar.gz
 #BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRoot: %{distro}
 BuildArch: noarch
-
+Requires: java >= 1.6
 
 %description
 Jetty is a Java web server packaged in such a way that it can be embedded in
