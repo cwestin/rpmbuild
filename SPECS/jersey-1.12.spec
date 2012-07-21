@@ -4,27 +4,26 @@
 # there, even though they are technically data interpreted by the jvm.
 %define libdir %{_exec_prefix}/lib
 
-Summary: Jetty Java web server library
-Name: jetty
-Version: 8.1.4
-%define vtag v20120524
+Summary: JSR311 implementation with Grizzly Server
+Name: jersey
+Version: 1.12
 Release: 1
-License: APACHE and ECLIPSE
-URL: http://wiki.eclipse.org/Jetty
-%define distro %{name}-distribution-%{version}.%{vtag}
-Source0: %{distro}.tar.gz
+License: CDDL
+URL: http://jersey.java.net/
+%define distro %{name}-archive-%{version}
+Source0: %{distro}.zip
 BuildRoot: %{distro}
 BuildArch: noarch
 Requires: java >= 1.6
 
+
 %description
-Jetty is a Java web server packaged in such a way that it can be embedded in
-other projects, as well as used as a servlet container in the traditional way.
+JSR311 RESTful web services support via annotations.
 
-This package contains all the jetty jars and structure, but does not have any
-server management scripts; those would go in a jetty-server package that
-would depend on this one.
+Also includes the Grizzly web server.
 
+This package is installed as a library, leaving it to users to create a
+dependent package that runs a server service.
 
 %prep
 # we have to give the (non-standard) name of the unzipped directory /w -n
@@ -32,8 +31,7 @@ would depend on this one.
 
 
 %build
-# The jars come pre-built from the jetty site, so there's nothing to build
-# here
+# the java jars come pre-built, so there's nothing to do here
 
 
 %install
@@ -56,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Fri Jul 20 2012 Chris Westin <cwestin@fedora-16-jetty> - 8.1.4-1
-- Initial build from v20120524.
+* Sat Jul 21 2012 Chris Westin <cwestin@fedora-16-jetty> - 1.12-1
+- Initial build.
 
