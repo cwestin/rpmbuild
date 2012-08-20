@@ -38,6 +38,7 @@ The next versions of the spec (JAXB 2.0/2.1/2.2) are being developed as JSR-222.
 # we have to give the (non-standard) name of the unzipped directory /w -n
 %setup -q -n %{distro}
 
+
 %build
 # the java jars come pre-built, so there's nothing to do here
 
