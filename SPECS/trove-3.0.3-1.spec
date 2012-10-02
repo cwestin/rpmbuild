@@ -4,14 +4,6 @@
 # there, even though they are technically data interpreted by the jvm.
 %define libdir %{_exec_prefix}/lib
 
-# The distribution of this available from the URL below comes as a
-# self-extracting jar that pops up a dialog box that must be clicked to
-# signify acceptance of the license. This can't be done on hosts without a
-# window manager, nor can it be scripted. In order to build this rpm, you
-# must first obtain that jar (JAXB2_20120516.jar), and go through those
-# operations, and then create the tarball named (implicitly) below
-# (jaxb-2.2.5-2.tar.gz) from the resulting directory. Place that in the SOURCES
-# directory, and let rpmbuild do the rest.
 
 Summary: Trove, a java library that doesn't require boxing primitive types
 Name: trove
@@ -23,6 +15,7 @@ Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch: noarch
 Requires: java >= 1.6
+
 
 %description
 The Trove library provides high speed regular and primitive collections for
