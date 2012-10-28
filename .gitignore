@@ -30,6 +30,7 @@ SRPMS/
 # packages
 *.tar
 *.gz
+*.tgz
 *.zip
 *.rpm
 *.jar
