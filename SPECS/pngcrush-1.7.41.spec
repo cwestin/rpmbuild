@@ -6,7 +6,7 @@ License: libpng-derived
 URL: http://pmt.sourceforge.net/pngcrush/
 Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-Requires: gcc, make
+
 
 %description
 pngcrush is an application for minimizing the size of png files.
